@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: J's Tech Blog
+title: J's Blog
 email: nagi_feather_j@yahoo.com
 description: >- # this means to ignore newlines until "baseurl:"
   Reinforcement learning and other fun things.
@@ -36,7 +36,9 @@ plugins:
   - jekyll-feed
 category_dir: category/
 tag_dir: tag/
-
+markdown: kramdown
+kramdown:
+  math_engine: null
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
