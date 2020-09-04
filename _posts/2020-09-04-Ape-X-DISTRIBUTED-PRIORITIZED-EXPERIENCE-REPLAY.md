@@ -24,7 +24,7 @@ Ape-X除去并行化之外，相比于普通的Prioritized Experience Replay，�
 1. 在收集数据阶段Actor便会算出优先值。
 2. actor可以执行不同的策略
 
-此外Ape-X的视线中使用到了的一下tricks
+Ape-X的实现中使用到了的tricks
 1. n-step estimation
 2. double Q-learning 
 3. dueling architecture
