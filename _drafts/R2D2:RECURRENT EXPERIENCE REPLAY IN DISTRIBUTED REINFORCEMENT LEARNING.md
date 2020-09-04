@@ -1,4 +1,9 @@
-# RECURRENT EXPERIENCE REPLAY IN DISTRIBUTED REINFORCEMENT LEARNING
+---
+layout: post
+title: RECURRENT EXPERIENCE REPLAY IN DISTRIBUTED REINFORCEMENT LEARNIN
+category: Reinforcement Learning
+tags: [Reinforcement Learning]
+---
 
 ## 概要
 

@@ -2,7 +2,7 @@
 layout: post
 title: Dueling Network Architectures for Deep Reinforcement Learning
 category: Reinforcement Learning
-tags: [Reinforcement Learning]
+tags: [Reinforcement Learning, 10-minutes paper]
 ---
 
 论文链接[Dueling Network Architectures for Deep Reinforcement Learning](https://arxiv.org/abs/1511.06581)
@@ -11,6 +11,7 @@ tags: [Reinforcement Learning]
 本文提出了一种新的表示形式来在深度神经网络中表示强化学习的信息，即在神经网络的末尾，作者将网络分叉为两个链路，分别输出状态价值和每个动作的优势值，在求和得到Q值。作者认为这种网络架构更适合于无模型的强化学习。
 
 网络架构的示意图如下
+
 ![截屏2020-08-28 下午4.09.27](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-08-28%20%E4%B8%8B%E5%8D%884.09.27.png)
 
 ## 算法
@@ -24,10 +25,10 @@ tags: [Reinforcement Learning]
 
 ## 效果
 虽然仅在网络架构上做了调整，但许多环境下都取得了更好的效果。
-![res
-](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%0A.png)
 
-为了更好的理解本算法的优势，作者分析了在不同状态下state value和advantage的关注点。
+![res](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%0A.png)
+
+为了更好的理解本算法的优势，作者分析了在不同状态下state value和advantage的关注点。发现value net更关注道路情况而advantage更注意车辆情况。
 
 ![example1](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%0A1.png)
 ## 核心逻辑代码
