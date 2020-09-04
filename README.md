@@ -3,5 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+Hi there. I'm Yongcheng Jiao.
+After getting my bachelor's degree of Computer Science in Beijing University of Posts and Telecommunications and getting my masters of Artificial Intelligence and Human Robot Interaction in Osaka University, Japan. I'm now working as a Reinforcement Learning researcher in Digisky Inc.
 
-你好，我是焦泳程。本科就读于北京邮电大学，计算机科学与技术专业。硕士阶段在日本大阪大学石黑研究室攻读硕士学位，进行人工智能和人机交互的研究。目前我在数字天空公司担任强化学习研究员一职。
+Email: nagi_feather_j@yahoo.com
