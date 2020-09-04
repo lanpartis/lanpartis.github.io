@@ -216,4 +216,4 @@ As a demonstration of how $G$ improved:
 
 ![](/public/img/demo.gif)
 
-Full source code can be found in [this github link](https://github.com/lanpartis/pokeGANs)
+Full source code can be found in [this github repository](https://github.com/lanpartis/pokeGANs)
