@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Recurrent Q-Learning for Partially Observable MDPs
+title: "DRQN:Deep Recurrent Q-Learning for Partially Observable MDPs"
 category: Reinforcement Learning
 tags: [Reinforcement Learning, 10-minutes paper]
 ---

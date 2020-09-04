@@ -1,10 +1,10 @@
 ---
 layout: post
-title: RECURRENT EXPERIENCE REPLAY IN DISTRIBUTED REINFORCEMENT LEARNIN
+title: "R2D2:Recurrent Experience Replay in Distributed Reinforcement Learning"
 category: Reinforcement Learning
-tags: [Reinforcement Learning]
+tags: [Reinforcement Learning, 10-minutes paper]
 ---
-
+论文链接[Recurrent Experience Replay in Distributed Reinforcement Learning](https://openreview.net/pdf?id=r1lyTjAqYX)
 ## 概要
 
 ### 问题

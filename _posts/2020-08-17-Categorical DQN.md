@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Distributional Perspective on Reinforcement Learning
+title: "Categorical DQN:A Distributional Perspective on Reinforcement Learning"
 category: Reinforcement Learning
 tags: [Reinforcement Learning, 10-minutes paper]
 ---

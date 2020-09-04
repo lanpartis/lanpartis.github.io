@@ -2,7 +2,7 @@
 layout: post
 title: Observe and Look Further, Achieving Consistent Performance on Atar
 category: Reinforcement Learning
-tags: [Reinforcement Learning]
+tags: [Reinforcement Learning, 10-minutes paper]
 ---
 
 ## 概要
