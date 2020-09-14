@@ -6,7 +6,7 @@
 			"layout: post",
 			"title: ${1: title}",
 			"category: ${2: category}",
-			"tags: [${2}, 10-minutes paper",
+			"tags: [${2}, 10-minutes paper]",
 			"---",
 			"论文链接 [${1}]()",
 			"## 概要",
