@@ -118,7 +118,7 @@ actor有多个，负责并行的收集经验数据。
 
 训练过程中，每个actor具有不同的$\beta$和$\gamma$值，并且采用$\epsilon$-greedy策略。
 
-对于第j个actor，它的$\beta$设置为
+对于第i个actor，它的$\beta$设置为
 
 $$ \beta_i=\left\{
 \begin{aligned}
