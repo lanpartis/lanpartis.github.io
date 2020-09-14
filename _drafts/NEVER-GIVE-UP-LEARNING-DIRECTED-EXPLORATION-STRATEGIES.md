@@ -97,9 +97,15 @@ $\beta$属于离散集合 $\\{\beta_i\\}_{i=0}^{N-1}$
 ![截屏2020-09-14 下午3.16.33](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-14%20%E4%B8%8B%E5%8D%883.16.33.png)
 
 
-#### 折扣率设定
+#### Loss
 
-对于不同的$\beta_i$，作者设置了不同的折扣率$\gamma_i$。偏好探索的policy应该具有更小的折扣率，偏好利用的policy应该有更大的折扣率。本文的实验中，$\gamma_0=\gamma_{max}=0.997$,$\gamma_{N-1}=\gamma_{min}=0.99$。
+使用了transformed Retrace double Q-learning loss。
+
+$$ L(x_t,a_t,\theta)=(Q(x_t,a_t;\theta)-\hat y_t)^2$$
+
+$$ \hat y_t = Q(x_t,a_t;\theta^-) +\sum_{s=t}^{t+k-1} \gamma^{s-t}(\prod_{i=t+1}^s c_i)(r_s+\gamma \sum_{a \in A} \pi(a|x_{s+1})Q(x_{s+1},a;\theta^-)-Q(x_s,a_s;\theta^-)) $$
+
+另外，对于不同的$\beta_i$，作者设置了不同的折扣率$\gamma_i$。偏好探索的policy应该具有更小的折扣率，偏好利用的policy应该有更大的折扣率。本文的实验中，$\gamma_0=\gamma_{max}=0.997$,$\gamma_{N-1}=\gamma_{min}=0.99$。
 
 #### 分布式训练
 
