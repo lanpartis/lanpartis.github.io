@@ -73,6 +73,7 @@ $err(x_t)=||\hat g(x_t;\theta)-g(x_t)||^2$。
 $\alpha_t$定义为正则化后的预测误差:
 
 $$\alpha_t=1+\frac{err(x_t)-\mu_e}{\theta_e}$$
+
 其中$\theta_e$和$\mu_e$分别为$err(x_t)$的滑动标准差和滑动均值。
 
 ### THE NEVER-GIVE-UP AGENT
@@ -103,7 +104,19 @@ $\beta$属于离散集合 $\\{\beta_i\\}_{i=0}^{N-1}$
 
 $$ L(x_t,a_t,\theta)=(Q(x_t,a_t;\theta)-\hat y_t)^2$$
 
-$$ \hat y_t = Q(x_t,a_t;\theta^-) +\sum_{s=t}^{t+k-1} \gamma^{s-t}(\prod_{i=t+1}^s c_i)(r_s+\gamma \sum_{a \in A} \pi(a|x_{s+1})Q(x_{s+1},a;\theta^-)-Q(x_s,a_s;\theta^-)) $$
+$$ \hat y_t = h(h^{-1}(Q(x_t,a_t;\theta^-)) +\sum_{s=t}^{t+k-1} \gamma^{s-t}(\prod_{i=t+1}^s c_i)(r_s+\gamma \sum_{a \in A} \pi(a|x_{s+1})h^{-1}(Q(x_{s+1},a;\theta^-))-h^{-1}(Q(x_s,a_s;\theta^-)))) $$
+
+$$ c_s=\lambda min(1,\frac{\pi(a_s|x_s)}{\mu(a_s|x_s)}) $$
+
+$$ h(z) = sign(z)(\sqrt{\|z\|+1}-1)+\epsilon z, \space \epsilon=10^{-2} $$
+
+$$ h^{-1}(z) = sign(z)((\frac{\sqrt{1+4 \epsilon(|z|+1+\epsilon)-1}}{2 \epsilon})-1) $$
+
+
+transformed Retrace double Q-learning loss其实是transformed bellman operator, Retrace和Double Q-learning的结合。
+h函数和transformed bellman operator是在[Observe and Look Further]({% post_url 2020-09-08-Observe-and-Look-Further-Achieving-Consistent-Performance-on-Atari %})这篇论文中提出的。
+Double Q-learning应该就不需要多说了，已经非常常见了。
+Retrace是一种借鉴资格迹方法提出的根据多步经验平滑Q值估计的方法，可以减小Q值的方差。
 
 另外，对于不同的$\beta_i$，作者设置了不同的折扣率$\gamma_i$。偏好探索的policy应该具有更小的折扣率，偏好利用的policy应该有更大的折扣率。本文的实验中，$\gamma_0=\gamma_{max}=0.997$,$\gamma_{N-1}=\gamma_{min}=0.99$。
 
