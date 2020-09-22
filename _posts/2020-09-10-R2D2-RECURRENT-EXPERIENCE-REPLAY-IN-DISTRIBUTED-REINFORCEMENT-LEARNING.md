@@ -28,7 +28,7 @@ $$h(z) = sign(z)(\sqrt{\|z\|+1}-1)+\epsilon z, \space \epsilon=10^{-2}$$
 在优先权重方面作者也做出了调整，使用了一个混合最大值与均值的TD-error:
 $ p=\eta\space max_i\delta_i +(1-\eta)\delta $ ($\eta$和$\alpha$设置为0.9)
 其中$\delta_i$为一条经验中第i步的TD-error
-,使用这个较激进数值的原因是作者发现使用更长的经验序列来训练时大误差也容易被冲淡，导致压缩priority的范围并且限制了优先值的选择有用的经验能力。
+,使用这个较激进方式来设置权重的原因是，作者发现使用更长的经验序列来训练时大误差也容易被冲淡，导致压缩priority的范围并且限制了优先值用于选择有用的经验能力。
 >This more aggressive scheme is motivated by our observation that averaging over long sequences tends to wash out large errors, thereby compressing the range of priorities and limiting the ability of prioritization to pick out useful experience.
 
 R2D2使用$\gamma = 0.997$，比Ape-X稍大。其他的超参数如下

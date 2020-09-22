@@ -16,7 +16,7 @@ tags: [Reinforcement Learning, 10-minutes paper]
 DRQN将传统DQN中卷积神经网络层之后的一层改为LSTM，其他保持不变。
 
 ### Stable Recurrent Updates
-使用RNN后便需要考虑隐藏状态的问题。在评估时RNN的隐藏状态会从回合初一直更新到回合末。但对于训练阶段，使用的数据不一定是完整的回合数据，因而每次更新时RNN初始状态的设定便成了问题。作者提出了两种更新方式。
+使用RNN后便需要考虑隐藏状态的问题。在评估阶段，RNN的隐藏状态会从回合初一直更新到回合末。但对于训练阶段，使用的数据不一定是完整的回合数据，因而每次更新时RNN初始状态的设定便成了问题。作者提出了两种更新方式。
 
 1. Bootstrapped Sequential Updates
 

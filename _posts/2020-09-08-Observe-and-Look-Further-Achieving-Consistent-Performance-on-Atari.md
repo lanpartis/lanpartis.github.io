@@ -68,7 +68,7 @@ $$ a'_i = argmax_{a \in \mathcal{A}} f_\theta(x'_i, a) $$
 
 ![ape-x dqfd](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-07%20%E4%B8%8B%E5%8D%882.34.10.png)
 
-训练上结合了Deep Q-Learnning from Demonstrations论文中的方式，从Expert和actor的replay buffer中分别采样用于训练，使用了其中提出的max margin loss来让expert的Q值最高，在本文中称为imitations loss。
+训练上结合了Deep Q-Learnning from Demonstrations论文中的方式，从expert和actor的replay buffer中分别采样用于训练，使用了其中提出的max margin loss来让expert的Q值最高，在本文中称为imitations loss。
 
 $$ L_{IM}(\theta;(t_i)^N_{i=1},(p_i)^N_{i=1},\theta^{(k-1)}) $$
 
