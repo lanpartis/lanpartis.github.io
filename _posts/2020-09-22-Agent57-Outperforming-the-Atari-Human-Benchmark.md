@@ -36,8 +36,6 @@ $$Q(x,a,j;\theta)=Q(x,a,j;\theta^e)+\beta_j(x,a,j;\theta^i)$$
 
 $$Q(x,a,j;\theta) = h(h^{-1}(Q(x,a,j;\theta^e))+\beta_jh^{-1}(Q(x,a,j;\theta^i)))$$
 
-但作者经实验发现是否使用这个方式对结果的影响不大，在论文中的实验里没有使用该方式。
-
 ### Adaptive Exploration over a Family of Policies(bandit)
 
 NGU中一个核心的思想在于使用同一个网络架构同时训练具有不同探索倾向的过个policy。但作者认为对所有policy不分优先级的均匀训练是不合理的，提出了使用一个元控制器(meta-controller)来动态的挑选policy去参与训练和验证的方法。如NGU中的UVFA所示，各个policy本质上是具有不同$(\beta_j,\gamma_j)$的策略，元控制器的调整即是在根据训练进展和游戏环境动态的调整折扣率和探索/利用奖励的平衡。
