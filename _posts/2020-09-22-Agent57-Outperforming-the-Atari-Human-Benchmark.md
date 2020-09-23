@@ -22,7 +22,7 @@ tags: [ Reinforcement Learning, 10-minutes paper]
 
 ## 算法
 
-### State-Action Value Function Parameterization（seperate nets)
+### State-Action Value Function Parameterization（separate nets)
 
 在NGU中，reward的被定义为intrinsic reward和extrinsic reward的线性组合。$r_t=r_t^e+\beta r_t^i$，并且使用Q了网络来近似$r_t$的值。
 
