@@ -28,7 +28,7 @@ tags: [ Reinforcement Learning, 10-minutes paper]
 
 本文中，作者将Q网络拆解成两个网络来分别拟合intrinsic reward和extrinsic reward。即
 
-$$Q(x,a,j;\theta)=Q(x,a,j;\theta^e)+\beta_j(x,a,j;\theta^i)$$
+$$Q(x,a,j;\theta)=Q(x,a,j;\theta^e)+\beta_j Q(x,a,j;\theta^i)$$
 
 这两个网络具有相同的网络结构，在计算[Retrace error]({% post_url 2020-09-16-Safe-and-Efficient-Off-Policy-Reinforcement-Learning %})时都使用target_policy$\pi(x)=argmax_{a\in\it{A}}A(x,a,j;\theta)$来选择下一步的action。
 
