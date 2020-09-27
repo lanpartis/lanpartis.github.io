@@ -97,4 +97,5 @@ policy设置：$\\{(\beta_j,\gamma_j)\\}_{j=0}^{N-1} ,\space N=32$，$\\{\gamma_
 本论文提出了一种基于NGU的改进算法Agent57，拆分了价值函数网络，引入了元控制器动态控制策略，并且使用了更长的经验窗口。Agent57是首个在Atari的全部57个游戏环境上都超越人类表现的算法。
 
 Agent57是一个（目前）集大成的算法，它与其他算法的关系如下图所示：
-![截屏2020-09-22 下午5.08.54](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-22%20%E4%B8%8B%E5%8D%885.08.54.png)
+
+![截屏2020-09-27 上午10.51.25](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-27%20%E4%B8%8A%E5%8D%8810.51.25.png)
