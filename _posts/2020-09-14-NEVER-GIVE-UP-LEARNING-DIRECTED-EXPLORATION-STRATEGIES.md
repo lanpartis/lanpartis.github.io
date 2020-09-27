@@ -110,8 +110,9 @@ $$ c_s=\lambda min(1,\frac{\pi(a_s|x_s)}{\mu(a_s|x_s)}) $$
 
 $$ h(z) = sign(z)(\sqrt{\|z\|+1}-1)+\epsilon z, \space \epsilon=10^{-2} $$
 
-$$ h^{-1}(z) = sign(z)((\frac{\sqrt{1+4 \epsilon(|z|+1+\epsilon)}-1}{2 \epsilon})-1) $$
+$$ h^{-1}(z) = sign(z)((\frac{\sqrt{1+4 \epsilon(|z|+1+\epsilon)}-1}{2 \epsilon})^2-1) $$
 
+(本论文附录E中的$h^{-1}(z)$有误，以[Observe and Look Further]({% post_url 2020-09-08-Observe-and-Look-Further-Achieving-Consistent-Performance-on-Atari %})A.2中的公式为准。)
 
 transformed Retrace double Q-learning loss其实是transformed bellman operator, Retrace和Double Q-learning的结合。
 h函数和transformed bellman operator是在[Observe and Look Further]({% post_url 2020-09-08-Observe-and-Look-Further-Achieving-Consistent-Performance-on-Atari %})这篇论文中提出的。
