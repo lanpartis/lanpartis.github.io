@@ -98,4 +98,4 @@ policy设置：$\\{(\beta_j,\gamma_j)\\}_{j=0}^{N-1} ,\space N=32$，$\\{\gamma_
 
 Agent57是一个（目前）集大成的算法，它与其他算法的关系如下图所示：
 
-![截屏2020-09-27 上午10.51.25](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-27%20%E4%B8%8A%E5%8D%8810.51.25.png)
+![截屏2020-09-27 下午12.24.46](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-27%20%E4%B8%8B%E5%8D%8812.24.46.png)
