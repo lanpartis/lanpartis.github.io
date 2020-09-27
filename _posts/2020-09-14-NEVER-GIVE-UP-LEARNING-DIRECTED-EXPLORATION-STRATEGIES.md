@@ -110,7 +110,7 @@ $$ c_s=\lambda min(1,\frac{\pi(a_s|x_s)}{\mu(a_s|x_s)}) $$
 
 $$ h(z) = sign(z)(\sqrt{\|z\|+1}-1)+\epsilon z, \space \epsilon=10^{-2} $$
 
-$$ h^{-1}(z) = sign(z)((\frac{\sqrt{1+4 \epsilon(|z|+1+\epsilon)-1}}{2 \epsilon})-1) $$
+$$ h^{-1}(z) = sign(z)((\frac{\sqrt{1+4 \epsilon(|z|+1+\epsilon)}-1}{2 \epsilon})-1) $$
 
 
 transformed Retrace double Q-learning loss其实是transformed bellman operator, Retrace和Double Q-learning的结合。
