@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Duqling DQN:Dueling Network Architectures for Deep Reinforcement Learning"
+title: "Dueling DQN:Dueling Network Architectures for Deep Reinforcement Learning"
 category: Reinforcement Learning
 tags: [Reinforcement Learning, 10-minutes paper]
 ---
