@@ -49,4 +49,4 @@ $$ c_s = \lambda min(1,\frac{\pi(a_s|x_s)}{\mu(a_s|x_s)}) $$
 
 由于Retrace使用了在1处截断的Importance Sampling，方差得到了降低。同时，因为
 $min(1,\frac{\pi(a_s|x_s)}{\mu(a_s|x_s)}) \ge \pi(a_s|x_s)$
-所以Retrace对回报的压缩幅度比$TB(\lambda)$更弱，（尤其是在两个policy接近时)提高了回报的利用效率。
+所以Retrace对回报的压缩幅度比$TB(\lambda)$更弱，(尤其是在两个policy接近时)提高了回报的利用效率。

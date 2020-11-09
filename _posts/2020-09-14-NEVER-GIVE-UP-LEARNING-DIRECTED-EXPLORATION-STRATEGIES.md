@@ -46,7 +46,7 @@ $r_t^{epsilon}$表示回合内的探索奖励，$\alpha_t$为生命周期内的�
 
 ![截屏2020-09-14 下午12.09.01](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-14%20%E4%B8%8B%E5%8D%8812.09.01.png)
 
-Embedding network $f$用于将observation映射成低维的向量，这个向量对应于可控制的状态。强调'可控'的原因是，对于状态自身会随时间改变的环境（作者举了一个交通状况的例子，即使什么都不做，也可以观测到大量不同的observation)，这种形式的状态探索和动作的探索性没有关系，也就不应该为该动作提供探索奖励。为此，作者通过训练一个孪生网络来预测状态改变与动作的关系，以剔除与动作对环境的影响无关的因素。如图所示，两个孪生网络接受先后两个observation，它们的输出会拼接在一起，输入一个含一层隐藏层的全连接神经网络分类器$h$正式的表示:为对于一条经验$\\{x_t,a_t,x_{t+1}\\}$，分类器输出概率 $ p(a|x_t,x_{t+1})=h(f(x_t),f(x_{t+1}))$,
+Embedding network $f$用于将observation映射成低维的向量，这个向量对应于可控制的状态。强调'可控'的原因是，对于状态自身会随时间改变的环境(作者举了一个交通状况的例子，即使什么都不做，也可以观测到大量不同的observation)，这种形式的状态探索和动作的探索性没有关系，也就不应该为该动作提供探索奖励。为此，作者通过训练一个孪生网络来预测状态改变与动作的关系，以剔除与动作对环境的影响无关的因素。如图所示，两个孪生网络接受先后两个observation，它们的输出会拼接在一起，输入一个含一层隐藏层的全连接神经网络分类器$h$正式的表示:为对于一条经验$\\{x_t,a_t,x_{t+1}\\}$，分类器输出概率 $ p(a|x_t,x_{t+1})=h(f(x_t),f(x_{t+1}))$,
 然后通过最大似然优化$f$与$h$两个网络的参数。
 
 #### 2. Episodic memory and intrinsic reward
@@ -78,7 +78,7 @@ $$\alpha_t=1+\frac{err(x_t)-\mu_e}{\theta_e}$$
 
 ### THE NEVER-GIVE-UP AGENT
 
-基于上一部分讲到的reward设计，现在的reward不再是只受action和state影响的随机变量了，因此目前agent实际上面临的是一个POMDP(partially Observed MDP)问题。为了简单处理，agent维护一个内部状态用来记忆历史信息（即使用RNN）。本文中作者使用了[R2D2]({% post_url 2020-09-10-R2D2-RECURRENT-EXPERIENCE-REPLAY-IN-DISTRIBUTED-REINFORCEMENT-LEARNING %})。
+基于上一部分讲到的reward设计，现在的reward不再是只受action和state影响的随机变量了，因此目前agent实际上面临的是一个POMDP(partially Observed MDP)问题。为了简单处理，agent维护一个内部状态用来记忆历史信息(即使用RNN)。本文中作者使用了[R2D2]({% post_url 2020-09-10-R2D2-RECURRENT-EXPERIENCE-REPLAY-IN-DISTRIBUTED-REINFORCEMENT-LEARNING %})。
 
 另外，由于探索奖励直接融合到了agent的奖励中，所以policy的探索偏好已经被刻入其学到的价值函数中，无法轻易的关闭。为了解决这个问题，作者会同时训练一个只接受外在环境奖励的policy。
 

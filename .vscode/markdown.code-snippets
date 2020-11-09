@@ -1,6 +1,6 @@
 {
 	"Papertemp": {
-		"prefix": "spt",
+		"prefix": "rl",
 		"body": [
 			"---",
 			"layout: post",
@@ -20,5 +20,16 @@
 			"## 核心逻辑代码"
 		],
 		"description": "paper read temp"
+	},
+	"Techtemp": {
+		"prefix": "tt",
+		"body": [
+			"---",
+			"layout: post",
+			"title: ${1:title}",
+			"category: ${2:category}",
+			"tags: [${2}]",
+			"---",	
+		]
 	}
 }

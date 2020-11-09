@@ -27,7 +27,7 @@ Z(x, a)是价值分布，这个分布受到回报R,下一个动作状态对$(X',
 
 $$ {\it{T}}^\pi Z(x,a) :=^D R(x,a)+\gamma P^\pi Z(x,a)  $$
 
-$$ P^\pi Z(x,a):=^D Z(X',A') \quad X'\sim P（·|x,a),A' \sim \pi(·|X') $$
+$$ P^\pi Z(x,a):=^D Z(X',A') \quad X'\sim P(·|x,a),A' \sim \pi(·|X') $$
 
 ### 价值分布的表示
 
@@ -49,7 +49,7 @@ $$ (\Phi \hat{\it{T}}Z_\theta(x,a))_i=\Sigma^{N-1}_{j=0}[{1-\frac{|[\hat{\it{T}}
 $[·]^a_b$表示把它的参数限制在$[a,b]$之间.
 $\hat{\it{T}} z_j:=r+\gamma z_j$.
 
-这个式子看起来比较复杂，但表达的意思只是把$Z_\theta$经过算子$\hat{\it{T}}$计算后得到的新分布$\hat{\it{T}} Z_\theta$中每个support对应的概率，分配给与它相邻（即距离小于$\Delta z$)的$Z_\theta$的support上，分配的多少由他们的距离远近决定。
+这个式子看起来比较复杂，但表达的意思只是把$Z_\theta$经过算子$\hat{\it{T}}$计算后得到的新分布$\hat{\it{T}} Z_\theta$中每个support对应的概率，分配给与它相邻(即距离小于$\Delta z$)的$Z_\theta$的support上，分配的多少由他们的距离远近决定。
 
 从算法上能更清晰的看出每个新support的概率是如何分配的。
 

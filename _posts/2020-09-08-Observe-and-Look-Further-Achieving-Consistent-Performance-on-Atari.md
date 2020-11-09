@@ -76,5 +76,5 @@ $$ \Sigma^N_{i=1}p_ie_i(max_{a \in \mathcal{A}}[f_\theta(x_i,a)+\lambda \delta_{
 
 ## 分析
 
-本算法在大多数游戏中都取得了更好的效果，并且是第一个在MONTEZUMA’S REVENGE环境（一个奖励非常稀疏的算法）中通关第一层的算法。
+本算法在大多数游戏中都取得了更好的效果，并且是第一个在MONTEZUMA’S REVENGE环境(一个奖励非常稀疏的算法)中通关第一层的算法。
 但在seaquest中却不如不使用demostration的agent。作者得出结论：由expert data引入的bias在部分游戏中可能是有害的。

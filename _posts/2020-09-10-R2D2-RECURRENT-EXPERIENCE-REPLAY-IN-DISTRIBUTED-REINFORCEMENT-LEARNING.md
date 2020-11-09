@@ -7,11 +7,11 @@ tags: [Reinforcement Learning, 10-minutes paper]
 论文链接[Recurrent Experience Replay in Distributed Reinforcement Learning](https://openreview.net/pdf?id=r1lyTjAqYX)
 ## 概要
 
-作者展示了experience replay在参数延迟（网络参数在产生样本和进行优化之间的延迟程度）上的影响，发现其导致了表征偏移和循环状态过期。这将有可能最终导致训练稳定性和效果的下降。
+作者展示了experience replay在参数延迟(网络参数在产生样本和进行优化之间的延迟程度)上的影响，发现其导致了表征偏移和循环状态过期。这将有可能最终导致训练稳定性和效果的下降。
 
 随后作者实验了多种策略来减轻RNN在experience replay上的训练时遇到的上述问题。
 
-最后作者提出了一个基于这些实验结果的强化学习算法R2D2（Recurrent Replay Distributed DQN），在Atari-57和DMLab-30上都取得了显著的优势。
+最后作者提出了一个基于这些实验结果的强化学习算法R2D2(Recurrent Replay Distributed DQN)，在Atari-57和DMLab-30上都取得了显著的优势。
 
 ## 算法
 
@@ -88,7 +88,7 @@ atari-57作为一个相对简单的环境，几乎是完全可观测的，所以
 
 可以看出，RNN单元是对性能影响最大的，其他的成分在不同游戏上则有不同的效果。
 
-第二组实验分析了RNN使用的历史信息长度对性能的影响。作者在MS-PACMAN（完全可观测）和EMSTM WATERMAZE（部分可观测）这两个环境上分别进行了实验，结果如下。
+第二组实验分析了RNN使用的历史信息长度对性能的影响。作者在MS-PACMAN(完全可观测)和EMSTM WATERMAZE(部分可观测)这两个环境上分别进行了实验，结果如下。
 
 ![截屏2020-09-09 下午2.31.54](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-09%20%E4%B8%8B%E5%8D%882.31.54.png)
 

@@ -16,13 +16,13 @@ tags: [ Reinforcement Learning, 10-minutes paper]
 
 * 对于上述多policy资源分配的问题，作者将其抽象为一个非稳态多臂老虎机问题来解决。
 
-* 提出了一个新的参数化方式（即新的网络结构）用来解耦NGU提出的intrinsic奖励和环境的extrinsic奖励。
+* 提出了一个新的参数化方式(即新的网络结构)用来解耦NGU提出的intrinsic奖励和环境的extrinsic奖励。
 
 * 尝试使用了更长时间的记忆信息，并且结果表明这对性能也有一定的提升。
 
 ## 算法
 
-### State-Action Value Function Parameterization（separate nets)
+### State-Action Value Function Parameterization(separate nets)
 
 在NGU中，reward的被定义为intrinsic reward和extrinsic reward的线性组合。$r_t=r_t^e+\beta r_t^i$，并且使用Q了网络来近似$r_t$的值。
 
@@ -57,7 +57,7 @@ policy设置：$\\{(\beta_j,\gamma_j)\\}_{j=0}^{N-1} ,\space N=32$，$\\{\gamma_
 作者首先对比了Agent57，R2D2，NGU，MuZero算法在所有Atari游戏上的表现。结果如下![57games](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-22%20%E4%B8%8B%E5%8D%883.45.39.png)
 
 其中可以的得出几个结论：
-1. MuZero获得了总游戏得分的均值和中位数最高，但这是由于在某几个游戏上（如Beam Rider）MuZero获得了非常高的分数，MuZero在某些游戏（如Venture）上效果极差。
+1. MuZero获得了总游戏得分的均值和中位数最高，但这是由于在某几个游戏上(如Beam Rider)MuZero获得了非常高的分数，MuZero在某些游戏(如Venture)上效果极差。
 2. R2D2在融合了元控制器后的R2D2(bandit)相比于R2D2(Retrace)表现得到了较大提升。
 3. Agent57在总体上获得了较高的分数，并且对于那些MuZero和R2D2无法学习的困难游戏上也取得了很好的表现，这足以证明Agent57是一个通用性很高的算法。
 
@@ -71,10 +71,10 @@ policy设置：$\\{(\beta_j,\gamma_j)\\}_{j=0}^{N-1} ,\space N=32$，$\\{\gamma_
 
 ![intrinsic reward weight](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-22%20%E4%B8%8B%E5%8D%8812.25.57.png)
 
-从结果中可以看出，用分离的两个网络来进行拟合时，$\beta$值的调整对于探索策略（绿色)的影响符合预期。
+从结果中可以看出，用分离的两个网络来进行拟合时，$\beta$值的调整对于探索策略(绿色)的影响符合预期。
 但随着$\beta$的增大，NGU中应用策略(蓝色)的效果受到了很大的影响而Agent57没有。NGU中的网络对于extrinsic奖励的拟合受到了$\beta$的影响，分离的两个网络可以更好的拟合intrinsic/extrinsic奖励。
 
-对于RNN网络使用的经验窗口长度，作者也进行了实验，对比了n=80（NGU和R2D2中使用）和n=160两种情况。
+对于RNN网络使用的经验窗口长度，作者也进行了实验，对比了n=80(NGU和R2D2中使用)和n=160两种情况。
 
 ![bptt window size](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-22%20%E4%B8%8B%E5%8D%8812.26.13.png)
 
@@ -96,6 +96,6 @@ policy设置：$\\{(\beta_j,\gamma_j)\\}_{j=0}^{N-1} ,\space N=32$，$\\{\gamma_
 
 本论文提出了一种基于NGU的改进算法Agent57，拆分了价值函数网络，引入了元控制器动态控制策略，并且使用了更长的经验窗口。Agent57是首个在Atari的全部57个游戏环境上都超越人类表现的算法。
 
-Agent57是一个（目前）集大成的算法，它与其他算法的关系如下图所示：
+Agent57是一个(目前)集大成的算法，它与其他算法的关系如下图所示：
 
 ![截屏2020-09-27 下午12.24.46](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/%E6%88%AA%E5%B1%8F2020-09-27%20%E4%B8%8B%E5%8D%8812.24.46.png)
