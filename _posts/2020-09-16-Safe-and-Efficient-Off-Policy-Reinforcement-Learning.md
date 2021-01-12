@@ -4,10 +4,10 @@ title: "Retrace: Safe and Efficient Off-Policy Reinforcement Learning"
 category:  Reinforcement Learning
 tags: [ Reinforcement Learning, 10-minutes paper]
 ---
-论文链接 [Safe and Efficient Off-Policy Reinforcement Learning]()
+论文链接 [Safe and Efficient Off-Policy Reinforcement Learning](https://arxiv.org/abs/1606.02647)
 ## 概要
 
-权衡Monte Carlo回报和Q函数的bootstrap估计一直依赖是个强化学习的一个问题，$TD\lambda)$则是一种比较经典的解决办法。本文讨论$TD(\lambda)$的优化版本$Q(\lambda)$和 $TB(\lambda)$的优劣，并提出了一种新的算法Retrace。目前Retrace算法已经被用于NGU和Agent57中。
+权衡Monte Carlo回报和Q函数的bootstrap估计一直依赖是个强化学习的一个问题，$TD(\lambda)$则是一种比较经典的解决办法。本文讨论$TD(\lambda)$的优化版本$Q(\lambda)$和 $TB(\lambda)$的优劣，并提出了一种新的算法Retrace。目前Retrace算法已经被用于NGU和Agent57中。
 
 ### 问题
 

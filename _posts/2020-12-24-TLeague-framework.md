@@ -187,14 +187,20 @@ class ActorTask(object):
 ```
 
 Actor在启动后,便会请求它对应的learner id的收集任务,随后不断进行收集数据,上报结果,请求新任务的循环. 其工作时序图如下.
+
 ![telague-task-sequential-graph的副本](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/telague-task-sequential-graph%E7%9A%84%E5%89%AF%E6%9C%AC.jpeg)
 
 # Game Manager
 
 League Manager 中负责调度训练任务中具体用模型的部分是Game Manager. 在League Manager需要为某个player分配对手时,便向Game Manager去询问对手的模型key.
+
 ![20201224162048](https://raw.githubusercontent.com/lanpartis/DocsPics/master/images_for_docs/20201224162048.png)
 
+Tleague中提供了多种Game Manager,进行策略的对手调度.
 ## Agent-Exploiter Game Manager(AEMatchMakingGameMgr)
 
-这个Game Manager中对手的调度算法使用的时[AlphaStar论文](https://www.nature.com/articles/s41586-019-1724-z)中提出的[League算法]({% post_url 2020-12-24-Alpha-Star-Analysis %}).
+这个Game Manager中对手的调度算法使用的是[AlphaStar论文](https://www.nature.com/articles/s41586-019-1724-z)中提出的League算法,我在[这篇博客]({% post_url 2020-12-24-Alpha-Star-Analysis %})中有过介绍.
 
+# 结合Pytorch使用
+
+TLeague框架本身提供的Actor与Learner都是基于TensorFlow 1.0的,使用并不是很方便,但各个组件间有良好的解耦,只要清楚了Learner与Actor如何处理Task,那完成就能在不修改其他组件的情况下,迁移到Pytorch上使用.
