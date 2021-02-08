@@ -17,7 +17,7 @@ tags: [Reinforcement Learning, 10-minutes paper]
 
 ### THE RECURRENT REPLAY DSTRIBUTED DQN(R2D2) AGENT
 
-本文提出的算法与Ape-X类似，使用了分布式优先经验回放，n-step double Q learning(n=5)以及dueling网络结构。此外与DRQN相同，在卷积层之和加入了LSTM层。
+本文提出的算法与Ape-X类似，使用了分布式优先经验回放，n-step double Q learning(n=5)以及dueling网络结构。此外与DRQN相同，在卷积层之后加入了LSTM层。
 
 由于使用RNN进行训练，存储的经验不再按照(s,a,r,s')的形式存储，改为存储固定长度(N=80)的(s,a,r)序列作为一条经验，前后两条经验有40个step的重叠。
 
